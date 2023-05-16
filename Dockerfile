@@ -4,8 +4,8 @@ COPY pom.xml /app/
 WORKDIR /app
 COPY src /app/src/
 COPY pomversionchange.sh ./ /app/
-FROM base AS run
+COPY /src/run.sh ./ /app/
 RUN chmod +x /app/pomversionchange.sh
 RUN mvn package
-
+RUN chmod +x src/run.sh
 CMD ["java", "-jar", "/app/target/*.jar"]
