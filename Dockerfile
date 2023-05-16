@@ -5,6 +5,6 @@ WORKDIR /app
 COPY src /app/src/
 COPY pomversionchange.sh ./ /app/
 RUN chmod +x /app/pomversionchange.sh
-RUN mvn clean package
+RUN mvn package
 
-CMD ["java", "-jar", "/app/target/myapp.jar"]
+CMD ["java", "-jar", "/app/target/*.jar"]
