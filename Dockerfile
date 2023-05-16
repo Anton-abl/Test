@@ -4,6 +4,7 @@ COPY pom.xml /app/
 WORKDIR /app
 COPY src /app/src/
 COPY pomversionchange.sh ./ /app/
+FROM base AS run
 RUN chmod +x /app/pomversionchange.sh
 RUN mvn package
 
