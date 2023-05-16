@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pom_file="pom.xml"
+pom_file="Test/pom.xml"
 backup_dir="back"
 backup_file="$backup_dir/pom.xml.bak"
 debug_file="$backup_dir/debug.log"
